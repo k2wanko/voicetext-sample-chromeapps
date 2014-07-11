@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "voicetext",
-  "description": "",
-  "version": "0.0.1",
+  "name": "voicetext sample app",
+  "description": "VoiceTextのサンプルアプリです。",
+  "version": "0.1.0",
   "minimum_chrome_version": "23",
   "icons": {
     "16": "assets/icon_16.png",
