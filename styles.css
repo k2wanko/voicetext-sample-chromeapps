@@ -1,0 +1,46 @@
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #F8F8F8;
+    font-size: 14px;
+    margin: 15px;
+}
+
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: -15px;
+}
+
+.navbar-right {
+    float: right !important;
+}
+
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+
+.navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+
+.player {
+
+}
+
