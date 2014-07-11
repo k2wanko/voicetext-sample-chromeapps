@@ -43,6 +43,12 @@
         if(typeof callback === "function"){
           return callback.call(window, null, btoa(binaryData), xhr.getResponseHeader('content-type'), xhr);
         }
+      } else {
+        if(xhr.readyState === 4){
+          if(typeof callback === "function"){
+            return callback.call(window, new Error(xhr.statusText));
+          }
+        }
       }
     };
     xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
