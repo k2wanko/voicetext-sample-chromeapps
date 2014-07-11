@@ -37,7 +37,19 @@
     });
 
     $("#edit_api_key_btn").click(function(){
-      $("#edit_api_key").modal();
+      chrome.storage.local.get("api_key", function(d){
+        $("#edit_api_key").modal();
+        var $form= $("#edit_api_key_form");
+        $form.val(d.api_key);
+      });
+      
+    });
+
+    $("#edit_api_key_save_btn").click(function(){
+      var v = api_key = $("#edit_api_key_form").val();
+      chrome.storage.local.set({api_key:v}, function(){
+        $("#edit_api_key").modal("hide");
+      });
     });
 
     $("#btn_display_front").click(function(e){
