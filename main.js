@@ -16,7 +16,7 @@
         });
         $("#use_consent_agree").prop("disabled", true);
         $("#use_consent_agree").click(function(){
-          var val = $("#modal_api_key_form").val();
+          var val = api_key = $("#modal_api_key_form").val();
           if(!val) return;
           chrome.storage.local.set({api_key: val}, function(){
             $("#use_consent").modal('hide');
