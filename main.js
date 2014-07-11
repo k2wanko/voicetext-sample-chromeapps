@@ -116,7 +116,9 @@ ass="col-xs-6 player-container"></div><div class="col-xs-2"><a download="'+text+
       
       voicetext(api_key, data, function(e, base64, mime){
         if(e){
-          return console.error(e.stack);
+          console.error(e);
+          $container.find(".player-container").append('<p style="color:red;">'+e.message+'</p>');
+          return;
         }
         var dataURI = 'data:audio/wav;base64,'+base64;
         var $audio = $("<audio controls>");
